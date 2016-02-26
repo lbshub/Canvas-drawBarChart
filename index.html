@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+	<title>柱状图</title>
+	<style type="text/css">
+		*{ margin:0; padding:0;}
+	</style>
+</head>
+<body>
+
+<div id="topBar"></div>
+
+<script type="text/javascript" src="drawBarChart.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',function(){
+
+	var data = [{
+		'rank': '第1名',
+		'name': 'A01***',
+		'amount': 192565
+	}, {
+		'rank': '第2名',
+		'name': 'B01***',
+		'amount': 120000
+	}, {
+		'rank': '第3名',
+		'name': 'C01***',
+		'amount': 100000
+	}, {
+		'rank': '第4名',
+		'name': 'D01***',
+		'amount': 80000
+	}, {
+		'rank': '第5名',
+		'name': 'E01***',
+		'amount': 70000
+	}, {
+		'rank': '第6名',
+		'name': 'F01***',
+		'amount': 63000
+	}, {
+		'rank': '第7名',
+		'name': 'G01***',
+		'amount': 42000
+	}, {
+		'rank': '第8名',
+		'name': 'H01***',
+		'amount': 30000
+	}, {
+		'rank': '第9名',
+		'name': 'M01***',
+		'amount': 27000
+	}, {
+		'rank': '第10名',
+		'name': 'N01***',
+		'amount': 15000
+	}],
+	wrapper = document.getElementById('topBar');
+	drawBarChart({
+		parent: wrapper,
+		width: 640,
+		data: data,
+		barWidth: 60,
+		spacedWidth: 10,
+		barWidth: 50,
+		color: '#f03',
+		lineColor: '#f03',
+		lineSize: '18px',
+		textSize: '18px',
+		textColor: '#333',
+		animated: true,
+		duration: 600,
+		after: function(){
+			console.log('ok')
+		}
+	});
+
+}, false);
+</script>
+
+</body>
+</html>
